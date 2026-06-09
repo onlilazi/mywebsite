@@ -1,0 +1,533 @@
+/* --- LICEF DE CAGAYAN UNIVERSITY THEMATIC STYLE --- */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  /* University Identity Color Palette */
+  --primary: #7A0010;       /* Deep Academic Maroon */
+  --primary-dark: #4A000A;  /* Dark Crimson Shadow */
+  --accent: #FFB703;        /* Golden Yellow Banner Hue */
+  --accent-light: #FFF0C2;  /* Light Tint Gold for highlights */
+  --text-main: #2A1B1C;     /* Dark Charcoal with a hint of warm red */
+  --text-muted: #6B5658;    /* Muted Maroon-Grey for secondary text */
+  --bg-main: #FDFBF7;       /* Elegant Parchment Canvas Cream */
+  --card-bg: #FFFFFF;       /* Pure White for inner content clarity */
+  
+  /* Status Colors tailored to theme */
+  --danger: #A80012;
+  --danger-bg: #FFF2F3;
+  --success: #157A54;
+  --success-bg: #F0FAF5;
+  --warning: #D97706;
+  --warning-bg: #FFFBEB;
+  --info: #0369A1;
+  --info-bg: #F0F9FF;
+  
+  /* Font Families */
+  --font-brand: 'Cinzel', serif;            /* For Logo & Main Headings */
+  --font-heading: 'Playfair Display', serif;/* For Section Titles */
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.7;
+  letter-spacing: -0.01em;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+/* --- HEADER & NAVIGATION (Collegiate Ribbon Style) --- */
+header {
+  background-color: var(--card-bg);
+  border-bottom: 4px solid var(--accent);
+  box-shadow: 0 4px 20px rgba(74, 0, 10, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.2rem 2rem;
+}
+
+.logo h1 {
+  font-family: var(--font-brand);
+  font-size: 1.6rem;
+  color: var(--primary);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.logo h1 span {
+  color: var(--text-main);
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-left: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+nav {
+  display: flex;
+  gap: 1.8rem;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-weight: 600;
+  transition: color 0.2s ease, border-color 0.2s ease;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+  color: var(--primary);
+  border-color: var(--accent);
+}
+
+.nav-btn {
+  background-color: var(--primary);
+  color: #ffffff !important;
+  padding: 0.6rem 1.4rem;
+  border-radius: 4px;
+  border: none !important;
+  transition: background-color 0.2s ease, transform 0.2s ease !important;
+}
+
+.nav-btn:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+/* --- HERO SECTION --- */
+.hero-section {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+  color: #ffffff;
+  padding: 7rem 2rem;
+  text-align: center;
+  position: relative;
+  border-bottom: 6px solid var(--accent);
+}
+
+/* Subtle architectural design overlay */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  opacity: 0.04;
+  background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.hero-content {
+  max-width: 850px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content h2 {
+  font-family: var(--font-brand);
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+  letter-spacing: 0.03em;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content .subtitle {
+  font-size: 1.35rem;
+  color: var(--accent);
+  margin-bottom: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-content .description {
+  font-size: 1.15rem;
+  opacity: 0.92;
+  margin-bottom: 3.5rem;
+  line-height: 1.8;
+  font-weight: 400;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--accent);
+  color: var(--primary-dark);
+  padding: 1rem 2.6rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.24);
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+  margin-bottom: 1rem;
+}
+
+.cta-button:hover {
+  background-color: #ffca47;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.35);
+}
+
+/* --- VISUAL MEDIA LAYOUT SEPARATION --- */
+.section-image-container {
+  width: 100%;
+  margin-top: 3.5rem;
+  margin-bottom: 2.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 3px solid var(--accent);
+  box-shadow: 0 12px 25px rgba(74, 0, 10, 0.08);
+}
+
+.responsive-img {
+  width: 100%;
+  height: auto;
+  max-height: 450px;
+  object-fit: cover;
+  display: block;
+}
+
+.image-caption {
+  display: block;
+  font-size: 0.95rem;
+  color: #ffffff;
+  background-color: var(--primary);
+  padding: 0.8rem 1.2rem;
+  font-weight: 500;
+  border-top: 2px solid var(--accent);
+}
+
+/* --- SCHOLASTIC CARD SECTIONS --- */
+.card-section {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  padding: 4rem;
+  margin-bottom: 4rem;
+  border: 1px solid #ebdccb;
+  box-shadow: 0 4px 30px rgba(122, 0, 16, 0.02);
+}
+
+.section-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 2px solid var(--primary-light);
+  padding-bottom: 1.5rem;
+}
+
+.badge {
+  display: inline-block;
+  background-color: var(--primary-light);
+  color: var(--primary);
+  padding: 0.35rem 1rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  letter-spacing: 0.06em;
+  border-left: 3px solid var(--primary);
+}
+
+.section-header h2 {
+  font-family: var(--font-brand);
+  font-size: 2.4rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  letter-spacing: 0.01em;
+}
+
+.definition {
+  font-size: 1.1rem;
+  background-color: #faf7f2;
+  padding: 1.5rem 2rem;
+  border-left: 4px solid var(--primary);
+  border-radius: 4px;
+  color: var(--text-main);
+  border-top: 1px solid #f2ece4;
+  border-bottom: 1px solid #f2ece4;
+  border-right: 1px solid #f2ece4;
+}
+
+/* --- GRID PLATFORMS --- */
+.grid-2-col {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.grid-3-col {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* --- SYSTEM BLOCKS & ALERTS --- */
+.content-box {
+  padding: 2.2rem;
+  border-radius: 6px;
+  background-color: #faf8f5;
+  border: 1px solid #f0e6da;
+  height: 100%;
+}
+
+.content-box h3 {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.content-box ul {
+  list-style-position: outside;
+  padding-left: 1.3rem;
+}
+
+.content-box ul li {
+  margin-bottom: 0.9rem;
+}
+
+/* Themed Status Overrides */
+.content-box.danger {
+  background-color: var(--danger-bg);
+  border: 1px solid #fca5a5;
+  border-top: 4px solid var(--danger);
+}
+.content-box.danger h3 { color: var(--danger); }
+
+.content-box.success {
+  background-color: var(--success-bg);
+  border: 1px solid #6ee7b7;
+  border-top: 4px solid var(--success);
+}
+.content-box.success h3 { color: var(--success); }
+
+.content-box.alert {
+  background-color: var(--warning-bg);
+  border: 1px solid #fde047;
+  border-top: 4px solid var(--warning);
+}
+.content-box.alert h3 { color: #9a3412; }
+
+.content-box.info {
+  background-color: var(--info-bg);
+  border: 1px solid #7dd3fc;
+  border-top: 4px solid var(--info);
+}
+.content-box.info h3 { color: var(--info); }
+
+.content-box.notice {
+  background-color: #f1f5f9;
+  border-left: 5px solid var(--text-muted);
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  border-right: 1px solid #e2e8f0;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+/* Action Framework blocks */
+.action-plan {
+  margin-top: 2rem;
+  background-color: #fffdf5;
+  border: 1px solid #fde047;
+  border-left: 5px solid var(--accent);
+}
+.action-plan h3 { color: var(--primary); font-family: var(--font-brand); font-size: 1.3rem; }
+.action-plan h4 { font-family: var(--font-heading); font-size: 1.2rem; color: var(--primary-dark); margin-bottom: 0.4rem;}
+
+/* --- ABOUT & EXTENDED REFERENCES --- */
+.transparent {
+  background: transparent;
+  padding-left: 0;
+  border: none;
+}
+.transparent h2 { font-family: var(--font-brand); font-size: 2.2rem; color: var(--primary); margin-bottom: 1rem; }
+.transparent p { margin-bottom: 1rem; }
+
+.reference-box {
+  background-color: var(--primary-dark);
+  color: #fdfbf7;
+  border: 1px solid var(--primary);
+  border-radius: 6px;
+}
+.reference-box h2 { font-family: var(--font-brand); color: var(--accent); margin-bottom: 1.5rem; font-size: 1.6rem; }
+.refs li {
+  font-size: 0.95rem;
+  margin-bottom: 1.2rem;
+  list-style: none;
+  border-left: 2px solid var(--accent);
+  padding-left: 1rem;
+}
+
+/* --- REGISTRATION / INTERACTION FORM --- */
+.contact-section {
+  background: linear-gradient(to bottom, var(--card-bg), #fffbf2);
+  border: 2px solid #ecd8be;
+}
+.contact-section h2 { font-family: var(--font-brand); font-size: 2.2rem; color: var(--primary); }
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.form-group label {
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--primary-dark);
+}
+.form-group input, .form-group textarea {
+  padding: 0.9rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: #ffffff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.form-group input:focus, .form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(122, 0, 16, 0.1);
+}
+.submit-btn {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 1rem 2.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: flex-start;
+  box-shadow: 0 4px 10px rgba(74, 0, 10, 0.15);
+  transition: background-color 0.2s, transform 0.1s;
+}
+.submit-btn:hover {
+  background-color: var(--primary-dark);
+}
+.submit-btn:active {
+  transform: scale(0.98);
+}
+
+/* --- FOOTER (Institutional Shield Sign-off) --- */
+footer {
+  background-color: #260003;
+  color: #ebdccb;
+  text-align: center;
+  padding: 3rem 2rem;
+  margin-top: 5rem;
+  font-size: 0.95rem;
+  border-top: 4px solid var(--accent);
+  letter-spacing: 0.02em;
+}
+
+footer p {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* --- RESPONSIVE MOBILE SPECIFICATIONS --- */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 1.2rem 1rem;
+  }
+  
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
+  }
+
+  nav a {
+    font-size: 0.85rem;
+  }
+  
+  .hero-section {
+    padding: 5rem 1rem;
+  }
+
+  .hero-content h2 {
+    font-size: 2.2rem;
+  }
+  
+  .card-section {
+    padding: 2.5rem 1.2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .grid-2-col, .grid-3-col {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .section-image-container {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .responsive-img {
+    max-height: 250px;
+  }
+
+  .submit-btn {
+    align-self: stroke;
+    width: 100%;
+    text-align: center;
+  }
+}
